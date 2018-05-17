@@ -1,0 +1,147 @@
+﻿body{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+footer img,header img{
+    vertical-align: middle;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+.anchorBL{
+    display: none;
+}
+header{
+    position: relative;
+    border-bottom: .01rem solid #DDDDDD;
+}
+header>div{
+    height: .47rem;
+    text-align: center;
+    line-height: .47rem;
+}
+header>.backImg{
+    width: .47rem;
+    position: absolute;
+}
+header>.title{
+    font-size: 17px;
+    font-weight: bold;
+}
+#attrMap{
+    height: 5rem;
+    width: 100%;
+}
+footer{
+    font-size: 12px;
+    padding: 0 .2rem;
+    height: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p{
+    text-align: center;
+}
+/*信息窗*/
+#infoContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#infoContent>.left{
+    flex: 1;
+}
+#infoContent>span{
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -.2rem;
+    left: 1.3rem;
+    border: .1rem solid transparent;
+    border-top-color: #0009;
+}
+#goHere{
+    background: #3FC8A3;
+    width: .7rem;
+    height: .25rem;
+    line-height: .25rem;
+    text-align: center;
+}
+/*模态框*/
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: rgba(0,0,0,.5);
+}
+/*提示框*/
+.toast {
+    width: 100%;
+    padding: 0 .15rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+    font-size: 16px;
+}
+.toast>ul,.toast>div{
+    border-radius: .12rem;
+    background: #fff;
+    padding: 0 .2rem;
+    text-align: center;
+}
+.toast>ul>li{
+    height: .56rem;
+    line-height: .56rem;
+}
+.toast>ul>li:first-child{
+    border-bottom: .01rem solid #EEEEEE;
+}
+#cancel{
+    font-size: 20px;
+    color: #48CFAD;
+    height: .57rem;
+    line-height: .57rem;
+    margin-top: .08rem;
+}
+.pActive{
+    color: #FC6F6F;
+}
+/*文字字体大小是不要换算成rem做单位的，而是使用媒体查询来进行动态设置*/
+@media screen and (max-width: 321px) {
+    body {
+        font-size:13px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+        font-size:14px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+}
